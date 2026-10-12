@@ -1,0 +1,132 @@
+.header {
+    position: absolute;
+    inset: var(--space-4) 0 auto;
+    z-index: 10;
+    color: var(--color-white);
+}
+
+.header :focus-visible {
+    outline-color: var(--color-white);
+}
+
+.header__inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+}
+
+.header__logo {
+    margin-right: auto;
+    font: 700 var(--fs-logo) / 1 var(--font-display);
+    text-transform: lowercase;
+}
+
+.header__search {
+    order: 1;
+    width: 2.75rem;
+    height: 2.75rem;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: var(--color-white);
+}
+
+.header__search img {
+    width: 100%;
+    height: 100%;
+}
+
+.header__burger {
+    order: 2;
+    position: relative;
+    width: 2.75rem;
+    height: 2.75rem;
+    cursor: pointer;
+}
+
+.header__burger::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1.5rem;
+    height: 2px;
+    background: var(--color-white);
+    box-shadow: 0 -8px var(--color-white), 0 8px var(--color-white);
+    transform: translate(-50%, -50%);
+}
+
+.header__toggle:focus-visible+.header__burger {
+    outline: 2px solid var(--color-white);
+    outline-offset: 3px;
+}
+
+.header__nav {
+    display: none;
+    position: absolute;
+    top: calc(100% + var(--space-2));
+    left: 0;
+    right: 0;
+    padding: var(--space-2) var(--space-4);
+    background: var(--color-espresso);
+    border-radius: var(--radius-card);
+}
+
+.header__toggle:checked~.header__nav {
+    display: block;
+}
+
+.header__nav a {
+    display: block;
+    padding: var(--space-3) 0;
+    min-height: 2.75rem;
+    font: 500 var(--fs-md) / 1.5 var(--font-ui);
+    text-transform: uppercase;
+}
+
+.header__nav .header__login {
+    font-weight: 600;
+}
+
+@media (min-width: 1024px) {
+    .header {
+        top: 55px;
+    }
+
+    .header__inner {
+        justify-content: space-between;
+    }
+
+    .header__logo {
+        margin-right: 0;
+    }
+
+    .header__burger {
+        display: none;
+    }
+
+    .header__search {
+        order: 0;
+        width: 3.8125rem;
+        height: 3.8125rem;
+    }
+
+    .header__nav {
+        display: block;
+        position: static;
+        padding: 0;
+        background: none;
+        border-radius: 0;
+    }
+
+    .header__nav ul {
+        display: flex;
+        gap: var(--space-10);
+    }
+
+    .header__nav a {
+        padding: var(--space-2) 0;
+        min-height: 0;
+    }
+}

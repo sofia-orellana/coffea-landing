@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Página no encontrada | Coffea</title>
+    <meta name="description" content="La página que buscás no existe. Volvé al inicio de Coffea.">
+    <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&family=Playfair+Display:wght@500;600;700&family=Poppins:wght@400;500;600&family=Reggae+One&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/css/main.css">
+    <style>
+        .notfound {
+            min-height: 60vh;
+            display: grid;
+            place-content: center;
+            gap: var(--space-6);
+            padding: 12rem var(--gutter) var(--space-14);
+            text-align: center
+        }
+
+        .notfound h1 {
+            font-family: var(--font-display)
+        }
+
+        .notfound a {
+            justify-self: center;
+            padding: var(--space-4) var(--space-10);
+            background: var(--color-espresso);
+            color: var(--color-bg);
+            border-radius: var(--radius-pill)
+        }
+    </style>
+</head>
+
+<body>
+    <a class="skip-link" href="#main">Saltar al contenido</a>
+
+    <header class="header">
+        <div class="header__inner container">
+            <a class="header__logo" href="/">coffea</a>
+            <nav class="header__nav" aria-label="Principal">
+                <ul>
+                    <li><a href="#">home</a></li>
+                    <li><a href="#">coffee</a></li>
+                    <li><a href="#">bakery</a></li>
+                    <li><a href="#">shop</a></li>
+                    <li><a href="#">about</a></li>
+                    <li><a class="header__login" href="#">login</a></li>
+                </ul>
+            </nav>
+            <button class="header__search" type="button" aria-label="Buscar">
+                <img src="/assets/icons/search.svg" alt="" width="61" height="61">
+            </button>
+        </div>
+    </header>
+
+    <main id="main" class="notfound">
+        <h1>404 | Page not found</h1>
+        <p>The page you are looking for does not exist.</p>
+        <a href="/">Back to home</a>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__inner container">
+            <a class="footer__logo" href="/">Coffea</a>
+            <nav class="footer__col" aria-labelledby="f-privacy">
+                <h3 id="f-privacy">PRIVACY</h3>
+                <ul>
+                    <li><a href="#">Terms & conditions</a></li>
+                    <li><a href="#">Privacy policy</a></li>
+                    <li><a href="#">Cookies</a></li>
+                </ul>
+            </nav>
+            <nav class="footer__col" aria-labelledby="f-services">
+                <h3 id="f-services">SERVICES</h3>
+                <ul>
+                    <li><a href="#">Plans & pricing</a></li>
+                    <li><a href="#">Delivery</a></li>
+                    <li><a href="#">Support</a></li>
+                </ul>
+            </nav>
+            <nav class="footer__col" aria-labelledby="f-about-us">
+                <h3 id="f-about-us">ABOUT US</h3>
+                <ul>
+                    <li><a href="#">Our story</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <nav class="footer__col" aria-labelledby="f-information">
+                <h3 id="f-information">INFORMATION</h3>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Locations</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </nav>
+            <nav class="footer__col" aria-labelledby="f-social">
+                <h3 id="f-social">SOCIAL MEDIA</h3>
+                <ul class="footer__social">
+                    <li><a href="#" aria-label="X / Twitter"><img src="/assets/icons/social-x.svg" alt="" width="24"
+                                height="24"></a></li>
+                    <li><a href="#" aria-label="Instagram"><img src="/assets/icons/social-instagram.svg" alt=""
+                                width="24" height="24"></a></li>
+                    <li><a href="#" aria-label="Facebook"><img src="/assets/icons/social-facebook.svg" alt="" width="24"
+                                height="24"></a></li>
+                    <li><a href="#" aria-label="LinkedIn"><img src="/assets/icons/social-linkedin.svg" alt="" width="24"
+                                height="24"></a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+</body>
+
+</html>
